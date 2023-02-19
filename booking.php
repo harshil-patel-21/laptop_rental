@@ -2,6 +2,17 @@
 
 @include 'config.php';
 
+
+$select = mysqli_query($conn, "SELECT * FROM `tblbooking` ") or die('query failed');
+if (mysqli_num_rows($select) > 0) {
+   $fetch = mysqli_fetch_assoc($select);
+}
+
+// $uid = $fetch['uid'];
+// $pid = $fetch['pid'];
+
+$uid = $_GET['booking'];
+
 ?>
 
 <!DOCTYPE html>
@@ -10,13 +21,15 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>admin page</title>
+   <title>my booking</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="admin/css/productstyle.css">
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 </head>
 <body>
@@ -35,7 +48,7 @@ if(isset($message)){
 
    <?php
 
-   $select = mysqli_query($conn, "SELECT * FROM tblbooking");
+   $select = mysqli_query($conn, "SELECT * FROM tblbooking WHERE uid='$uid'");
    
    ?>
    <div class="product-display">
@@ -53,14 +66,26 @@ if(isset($message)){
             <td><img src="admin/uploaded_img/<?php echo $row['product_image']; ?>" height="100" alt=""></td>
             <td><?php echo $row['product_name']; ?></td>
             <td><?php echo $row['priceperday']; ?>Rs</td>
-            <td><h3 id="status"></h3></td>
+            <td>
+               <?php
+                  if($row['status'] == '0'){
+                     echo "pending";
+                  }
+
+                  if($row['status'] == '1'){
+                     echo "confirm";
+                  }
+
+                  if($row['status'] == '2'){
+                     echo "cancel";
+                  }
+               ?>
+            </td>
          </tr>
       <?php } ?>
       </table>
    </div>
 
 </div>
-
-
 </body>
 </html>

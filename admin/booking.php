@@ -52,9 +52,10 @@ if(isset($message)){
          <tr>
             <td><img src="uploaded_img/<?php echo $row['product_image']; ?>" height="100" alt=""></td>
             <td><?php echo $row['product_name']; ?></td>
-            <td><?php echo $row['priceperday']; ?>Rs</td>
+            <td><?php echo $row['priceperday']; ?>Rs/day</td>
             <td>
                
+                <a href="booking_detail.php?detail=<?php echo $row['id'];?>">view detail</a>
             </td>
          </tr>
       <?php } ?>
@@ -62,7 +63,5 @@ if(isset($message)){
    </div>
 
 </div>
-
-
 </body>
 </html>

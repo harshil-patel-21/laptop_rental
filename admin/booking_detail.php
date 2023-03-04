@@ -4,6 +4,15 @@ include 'config.php';
 
 $bid = $_GET['detail'];
 
+if(isset($_POST['confirm'])){
+    mysqli_query($conn, "UPDATE `tblbooking` SET status = '1' WHERE id = '$bid' ");
+}
+else{
+    mysqli_query($conn, "UPDATE `tblbooking` SET status = '2' WHERE id = '$bid' ");
+
+}
+
+
 
 ?>
 
@@ -21,6 +30,8 @@ $bid = $_GET['detail'];
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="js/status.js"></script>
 </head>
 <body>
 
@@ -66,17 +77,16 @@ $bid = $_GET['detail'];
                     </div> -->
                     <p class = "product-description"><?php echo $fetch['product_detail'];?></p>
                     <div class = "btn-groups">
-                    <button type="button" class="btn btn-success" onclick="confrim">confirm</button>
-                    <button type="button" class="btn btn-danger" onclick="cancel">cancel</button>
+                        <form action="" method="post" enctype="multipart/form-data">
+                        <!-- <button type="button" class="btn btn-success" name="confirm">confirm</button>
+                        <button type="button" class="btn btn-danger" name="cancel">cancel</button> -->
+                        <input type="submit" value="confirm" name="confirm" class="btn btn-success">
+                        <input type="submit" value="cancel" name="cancel" class="btn btn-danger">
+                    </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-<script>
-    
-</script>
-
 </body>
 </html>

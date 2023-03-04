@@ -46,7 +46,7 @@ $select = mysqli_query($conn, "SELECT * FROM tblproduct");
         <div class="card-body">
           <h4 class="card-title"><?php echo $row['product_name']; ?></h4>
           <p class="card-text"><?php echo $row['priceperday']; ?>Rs</p>
-          <a href="product_detail.php?detail=<?php echo $row['id']?>" class="btn btn-primary">view detail</a>
+          <a href="product_detail.php?detail=<?php echo $row['id']?>" class="btn btn-primary" target="_blank">view detail</a>
         </div>
       </div>
     </div>

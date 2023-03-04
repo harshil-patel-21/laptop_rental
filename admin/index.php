@@ -137,7 +137,7 @@ if(isset($_GET['logout'])){
 				<li>
 				<i class='bx bxs-book-content bx-rotate-180' ></i>
 					<span class="text">
-						<!-- <h3>?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tblbooking")) ?></h3> -->
+						<h3><?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tblbooking")) ?></h3>
 						<p>bookings</p>
 					</span>
 				</li>

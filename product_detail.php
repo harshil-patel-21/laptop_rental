@@ -1,6 +1,12 @@
 <?php
 include 'config.php';
 
+session_start();
+$user_id = $_SESSION['user_id'];
+
+if(!isset($user_id)){
+   header('location:login.php');
+};
 
 $pid = $_GET['detail'];
 
@@ -19,12 +25,11 @@ if(isset($_POST['book'])){
     $from_date = $_POST['from_date'];
     $to_date = $_POST['to_date'];
     $status = 0;
-    $uid = $fetch['id'];
  
     if(empty($from_date) || empty($to_date)){
        $message[] = 'please enter date';
     }else{
-       $insert = "INSERT INTO tblbooking(pid, uid, product_name, product_detail, priceperday, product_image, from_date, to_date, status) VALUES('$pid', '$uid', '$product_name', '$product_detail', '$priceperday', '$product_image', '$from_date', '$to_date', '$status')";
+       $insert = "INSERT INTO tblbooking(pid, uid, product_name, product_detail, priceperday, product_image, from_date, to_date, status) VALUES('$pid', '$user_id', '$product_name', '$product_detail', '$priceperday', '$product_image', '$from_date', '$to_date', '$status')";
        $upload = mysqli_query($conn,$insert);
        if($upload){
           $message[] = 'book successfully';

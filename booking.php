@@ -2,6 +2,8 @@
 
 @include 'config.php';
 
+session_start();
+$user_id = $_SESSION['user_id'];
 
 $select = mysqli_query($conn, "SELECT * FROM `tblbooking` ") or die('query failed');
 if (mysqli_num_rows($select) > 0) {
@@ -10,8 +12,6 @@ if (mysqli_num_rows($select) > 0) {
 
 // $uid = $fetch['uid'];
 // $pid = $fetch['pid'];
-
-$uid = $_GET['booking'];
 
 ?>
 
@@ -48,7 +48,7 @@ if(isset($message)){
 
    <?php
 
-   $select = mysqli_query($conn, "SELECT * FROM tblbooking WHERE uid='$uid'");
+   $select = mysqli_query($conn, "SELECT * FROM tblbooking WHERE uid='$user_id'");
    
    ?>
    <div class="product-display">
@@ -65,7 +65,7 @@ if(isset($message)){
          <tr>
             <td><img src="admin/uploaded_img/<?php echo $row['product_image']; ?>" height="100" alt=""></td>
             <td><?php echo $row['product_name']; ?></td>
-            <td><?php echo $row['priceperday']; ?>Rs</td>
+            <td><?php echo $row['priceperday']; ?>Rs/day</td>
             <td>
                <?php
                   if($row['status'] == '0'){

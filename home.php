@@ -55,7 +55,7 @@ if(isset($_GET['logout'])){
         <li><a href="#">Reviews</a></li>
       </ul>
       <div class="header-btn">
-        <a href="booking.php?booking=<?php echo $user_id; ?>" class="sign-in">my booking</a>
+        <a href="booking.php?booking=<?php echo $user_id; ?>" class="sign-in" target="_blank">my booking</a>
         <a href="update_profile.php" class="sign-in">update profile</a>
       <a href="home.php?logout=<?php echo $user_id; ?>" class="sign-in">logout</a>
       </div>

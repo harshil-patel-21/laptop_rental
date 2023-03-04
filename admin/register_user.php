@@ -36,8 +36,8 @@ if(isset($_GET['delete'])){
                                 <th> ID </th>
                                 <th> Username </th>
                                 <th>Email </th>
-                                <th>EDIT</th>
-                                <th>DELETE</th>
+                                <!-- <th>EDIT</th>
+                                <th>DELETE</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -51,12 +51,13 @@ if(isset($_GET['delete'])){
                                     <td><?php  echo $row['id']; ?></td>
                                     <td><?php  echo $row['name']; ?></td>
                                     <td><?php  echo $row['email']; ?></td>
-                                    <td>
-                                        <a href="register_edit.php?edit=<? echo $row['id']; ?>">edit</a>
-                                    </td>
-                                    <td>
+                                    <!-- <td><form>
+                                        <a href="register_edit.php?edit=<? echo $row['id']; ?>" target="_bl
+                                        ">edit</a>
+                                    
                                         <a href="register_edit.php?edit=<? echo $row['id']; ?>">delete</a>
-                                    </td>
+                                        </form>
+                                    </td> -->
                                 </tr>
                             <?php
                                 } 

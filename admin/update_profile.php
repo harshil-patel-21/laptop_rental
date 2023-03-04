@@ -2,7 +2,7 @@
 
 include 'config.php';
 session_start();
-$user_id = $_SESSION['user_id'];
+$user_id = 0;
 
 if (isset($_POST['update_profile'])) {
 
@@ -28,7 +28,7 @@ if (isset($_POST['update_profile'])) {
       } elseif ($new_pass != $confirm_pass) {
          $message[] = 'confirm password not matched!';
       } else {
-         mysqli_query($conn, "UPDATE `tbluser` SET password = '$confirm_pass' WHERE id = '$user_id'") or die('query failed');
+         mysqli_query($conn, "UPDATE `tbladmin` SET password = '$confirm_pass' WHERE id = '$user_id'") or die('query failed');
          $message[] = 'password updated successfully!';
       }
    }
@@ -49,31 +49,6 @@ if (isset($_POST['update_profile'])) {
          $message[] = 'image updated succssfully!';
       }
    }
-
-   // if(empty($update_name)){
-   //    $message[] = 'enter the username';
-   // }
-   // if(empty($update_email)){
-   //    $message[] = 'enter the email';
-   // }
-   // if(empty($update_image)){
-   //    $message[] = 'image not uploaded';
-   // }
-
-   
-   // if (empty($update_name)) {
-   //    $message[] = 'enter the username';
-   // } 
-   // else {
-   //    mysqli_query($conn, "UPDATE `tbladmin` SET name = '$update_name' WHERE id = '$user_id'") or die('query failed');
-   // }
-
-   // if (empty($update_email)) {
-   //    $message[] = 'enter the email';
-   // } 
-   // else {
-   //    mysqli_query($conn, "UPDATE `tbladmin` SET email = '$update_email' WHERE id = '$user_id'") or die('query failed');
-   // }
 
 }
 
@@ -137,7 +112,7 @@ if (isset($_POST['update_profile'])) {
             </div>
          </div>
          <input type="submit" value="update profile" name="update_profile" class="btn">
-         <a href="index.php" class="delete-btn">go back</a>
+         <a href="home.php" class="delete-btn">go back</a>
       </form>
 
    </div>

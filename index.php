@@ -21,7 +21,7 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="product.php" target="_blank">Product</a></li>
         <li><a href="contact.php" target="_blank"></a>Contact</li>
-        <li><a href="#">Reviews</a></li>
+        <!-- <li><a href="#">Reviews</a></li> -->
       </ul>
       <div class="header-btn">
         <a href="login.php" class="sign-up">Login/Signup</a>
@@ -51,36 +51,36 @@
       <div class="services-container">
         <div class="box">
           <div class="box-img">
-            <img src="images/laptop1.jpg" alt="" />
+            <img src="admin/uploaded_img/download (1).webp" alt="" />
           </div>
-          <p>2017</p>
-          <h3>2017 lenovo laptop</h3>
-          <h2>17,999Rs | 200Rs<span>/day</span></h2>
-          <a href="#" class="btn">Book now</a>
+          <!-- <p>2017</p> -->
+          <h3>IdeaPad Flex 5i 12th Gen (14, Intel)</h3>
+          <h2>350Rs<span>/day</span></h2>
+          <a href="product.php" class="btn" target="_blank">Book now</a>
         </div>
       </div>
 
       <div class="services-container">
         <div class="box">
           <div class="box-img">
-            <img src="images/laptop1.jpg" alt="" />
+            <img src="admin/uploaded_img/IP-Slim-5i-12th-Gen-15-1.jpg" alt="" />
           </div>
-          <p>2017</p>
-          <h3>2017 lenovo laptop</h3>
-          <h2>17,999Rs | 200Rs<span>/day</span></h2>
-          <a href="#" class="btn">Book now</a>
+          <!-- <p>2017</p> -->
+          <h3> IdeaPad Slim 5i 12th Gen, 39.62cms - Intel i5 (Storm Grey)</h3>
+          <h2>300Rs<span>/day</span></h2>
+          <a href="product.php" class="btn" target="_blank">Book now</a>
         </div>
       </div>
 
       <div class="services-container">
         <div class="box">
           <div class="box-img">
-            <img src="images/laptop1.jpg" alt="" />
+            <img src="admin/uploaded_img/download.webp" alt="" />
           </div>
-          <p>2017</p>
-          <h3>2017 lenovo laptop</h3>
-          <h2>17,999Rs | 200Rs<span>/day</span></h2>
-          <a href="#" class="btn">Book now</a>
+          <!-- <p>2017</p> -->
+          <h3>ThinkPad L14 Gen 3 (14, Intel)</h3>
+          <h2>120Rs<span>/day</span></h2>
+          <a href="product.php" class="btn" target="_blank">Book now</a>
         </div>
       </div>
     </section>
@@ -103,7 +103,7 @@
           <p>
           Our team of experts is dedicated to providing exceptional customer service, from the initial rental process to the end of your rental period. We take pride in our commitment to providing our customers with the best possible rental experience.
           </p>
-          <a href="contact.html" target="_blank" class="btn">contact us</a>
+          <a href="contactus.php" target="_blank" class="btn">contact us</a>
         </div>
       </div>
     </section>

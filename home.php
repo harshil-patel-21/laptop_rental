@@ -51,8 +51,8 @@ if(isset($_GET['logout'])){
       <ul class="navbar">
         <li><a href="index.php">Home</a></li>
         <li><a href="product.php" target="_blank">Product</a></li>
-        <li><a href="contactus.php" target="_blank"></a>Contact us</li>
-        <li><a href="#">Reviews</a></li>
+        <li><a href="contactus.php" target="_blank"></a>Contact</li>
+        <!-- <li><a href="#">Reviews</a></li> -->
       </ul>
       <div class="header-btn">
         <a href="booking.php?booking=<?php echo $user_id; ?>" class="sign-in" target="_blank">my booking</a>
@@ -83,36 +83,36 @@ if(isset($_GET['logout'])){
       <div class="services-container">
         <div class="box">
           <div class="box-img">
-            <img src="images/laptop1.jpg" alt="" />
+            <img src="admin/uploaded_img/download (1).webp" alt="" />
           </div>
-          <p>2017</p>
-          <h3>2017 lenovo laptop</h3>
-          <h2>17,999Rs | 200Rs<span>/day</span></h2>
-          <a href="#" class="btn">Book now</a>
+          <!-- <p>2017</p> -->
+          <h3>IdeaPad Flex 5i 12th Gen (14, Intel)</h3>
+          <h2>350Rs<span>/day</span></h2>
+          <a href="product.php" class="btn" target="_blank">Book now</a>
         </div>
       </div>
 
       <div class="services-container">
         <div class="box">
           <div class="box-img">
-            <img src="images/laptop1.jpg" alt="" />
+            <img src="admin/uploaded_img/IP-Slim-5i-12th-Gen-15-1.jpg" alt="" />
           </div>
-          <p>2017</p>
-          <h3>2017 lenovo laptop</h3>
-          <h2>17,999Rs | 200Rs<span>/day</span></h2>
-          <a href="#" class="btn">Book now</a>
+          <!-- <p>2017</p> -->
+          <h3> IdeaPad Slim 5i 12th Gen, 39.62cms - Intel i5 (Storm Grey)</h3>
+          <h2>300Rs<span>/day</span></h2>
+          <a href="product.php" class="btn" target="_blank">Book now</a>
         </div>
       </div>
 
       <div class="services-container">
         <div class="box">
           <div class="box-img">
-            <img src="images/laptop1.jpg" alt="" />
+            <img src="admin/uploaded_img/download.webp" alt="" />
           </div>
-          <p>2017</p>
-          <h3>2017 lenovo laptop</h3>
-          <h2>17,999Rs | 200Rs<span>/day</span></h2>
-          <a href="#" class="btn">Book now</a>
+          <!-- <p>2017</p> -->
+          <h3>ThinkPad L14 Gen 3 (14, Intel)</h3>
+          <h2>120Rs<span>/day</span></h2>
+          <a href="product.php" class="btn" target="_blank">Book now</a>
         </div>
       </div>
     </section>
@@ -130,18 +130,12 @@ if(isset($_GET['logout'])){
         <div class="about-text">
           <span>About us</span>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            recusandae delectus quidem nam nisi praesentium temporibus aliquam
-            quod alias eos nostrum, suscipit doloribus facilis consequuntur
-            expedita vero enim blanditiis ea.
+          We are a leading laptop rental company that provides individuals with the latest technology at affordable prices. Our goal is to make technology accessible to everyone, regardless of budget constraints or specific needs.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
-            obcaecati unde ducimus sunt suscipit dicta, eveniet numquam
-            consectetur animi rerum, blanditiis cum praesentium voluptas fugit
-            repudiandae voluptatum voluptatibus doloribus. Totam.
+          Our team of experts is dedicated to providing exceptional customer service, from the initial rental process to the end of your rental period. We take pride in our commitment to providing our customers with the best possible rental experience.
           </p>
-          <a href="contact.html" target="_blank" class="btn">contact us</a>
+          <a href="contactus.php" target="_blank" class="btn">contact us</a>
         </div>
       </div>
     </section>
@@ -157,7 +151,7 @@ if(isset($_GET['logout'])){
           <div class="rev-img">
             <img src="images/review1.jpg" alt="" />
           </div>
-          <h2>someone name</h2>
+          <h2>HARSHIL PATEL</h2>
           <div class="stars">
             <i class="bx bxs-star"></i>
             <i class="bx bxs-star"></i>
@@ -166,10 +160,7 @@ if(isset($_GET['logout'])){
             <i class="bx bxs-star-half"></i>
           </div>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed neque
-            ullam dolorem asperiores culpa quis, explicabo voluptate assumenda
-            maiores rerum ratione dolor inventore a. Placeat qui totam ratione
-            accusamus quia.
+            Best customer service.
           </p>
         </div>
 
@@ -177,7 +168,7 @@ if(isset($_GET['logout'])){
           <div class="rev-img">
             <img src="images/review1.jpg" alt="" />
           </div>
-          <h2>someone name</h2>
+          <h2>YAMAN SHAIKH</h2>
           <div class="stars">
             <i class="bx bxs-star"></i>
             <i class="bx bxs-star"></i>
@@ -186,10 +177,7 @@ if(isset($_GET['logout'])){
             <i class="bx bxs-star-half"></i>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In quia
-            nam, dolor nulla suscipit veritatis nostrum veniam natus eveniet
-            enim at ullam dolore voluptates debitis eos possimus? Dicta, nulla
-            dolorem?
+            Easy to use and provide laptops on resonable price.
           </p>
         </div>
 
@@ -197,7 +185,7 @@ if(isset($_GET['logout'])){
           <div class="rev-img">
             <img src="images/review1.jpg" alt="" />
           </div>
-          <h2>someone name</h2>
+          <h2>SHANKAR MAJJI</h2>
           <div class="stars">
             <i class="bx bxs-star"></i>
             <i class="bx bxs-star"></i>
@@ -206,10 +194,7 @@ if(isset($_GET['logout'])){
             <i class="bx bxs-star-half"></i>
           </div>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui dolor,
-            veniam autem corrupti nemo enim. Sint reprehenderit tenetur vitae
-            minima assumenda, ullam, dolorem laudantium fugiat, minus iste
-            obcaecati? Delectus, quod.
+            Best website for renting laptops at low prices
           </p>
         </div>
       </div>
